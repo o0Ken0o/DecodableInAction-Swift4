@@ -9,17 +9,44 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let decoder: JSONDecoder = {
+        return JSONDecoder()
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+//        demoWithLocalJson()
+//        demoWithLocalJsonArray()
+//        demoWithLocalJsonDict()
+//        demoWithLocalJsonNBool()
+        demoWithDataThatContainsAGitHubUser()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func demoWithLocalJson() {
+        let githubUser = try! decoder.decode(GitHubUser.self, from: aGithubUser)
+        print(githubUser)
     }
-
-
+    
+    private func demoWithLocalJsonArray() {
+        let parsedGitHubUsersArray = try! decoder.decode([GitHubUser].self, from: gitHubUsersArray)
+        parsedGitHubUsersArray.forEach{print($0)}
+    }
+    
+    private func demoWithLocalJsonDict() {
+        let parsedGitHubUsersDict = try! decoder.decode([String: GitHubUser].self, from: gitHubUsersDict)
+        parsedGitHubUsersDict.forEach{print("key: \($0.key), value: \($0.value)")}
+    }
+    
+    private func demoWithLocalJsonNBool() {
+        let parsedGitHubUsersNBool = try! decoder.decode([GitHubUserOrBool].self, from: gitHubUsersWithBool)
+        parsedGitHubUsersNBool.forEach{print($0)}
+    }
+    
+    private func demoWithDataThatContainsAGitHubUser() {
+        let parsedDataThatContainsAGitHubUser = try! decoder.decode(TypeContainsAGitHubUser.self, from: aBlockThatContainsAGitHubUser)
+        print(parsedDataThatContainsAGitHubUser.gitHub)
+        print(parsedDataThatContainsAGitHubUser.simpleString)
+    }
 }
 

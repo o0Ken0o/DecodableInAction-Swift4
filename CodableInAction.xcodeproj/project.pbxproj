@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05D591CB2031718A002D32C7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D591CA2031718A002D32C7 /* Models.swift */; };
+		05D591CD2031727D002D32C7 /* SeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D591CC2031727D002D32C7 /* SeedData.swift */; };
 		05FBE7842031384E003F51B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FBE7832031384E003F51B8 /* AppDelegate.swift */; };
 		05FBE7862031384E003F51B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FBE7852031384E003F51B8 /* ViewController.swift */; };
 		05FBE7892031384E003F51B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05FBE7872031384E003F51B8 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05D591CA2031718A002D32C7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		05D591CC2031727D002D32C7 /* SeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedData.swift; sourceTree = "<group>"; };
 		05FBE7802031384E003F51B8 /* CodableInAction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodableInAction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FBE7832031384E003F51B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05FBE7852031384E003F51B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				05FBE78A2031384E003F51B8 /* Assets.xcassets */,
 				05FBE78C2031384E003F51B8 /* LaunchScreen.storyboard */,
 				05FBE78F2031384E003F51B8 /* Info.plist */,
+				05D591CA2031718A002D32C7 /* Models.swift */,
+				05D591CC2031727D002D32C7 /* SeedData.swift */,
 			);
 			path = CodableInAction;
 			sourceTree = "<group>";
@@ -136,6 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D591CD2031727D002D32C7 /* SeedData.swift in Sources */,
+				05D591CB2031718A002D32C7 /* Models.swift in Sources */,
 				05FBE7862031384E003F51B8 /* ViewController.swift in Sources */,
 				05FBE7842031384E003F51B8 /* AppDelegate.swift in Sources */,
 			);
